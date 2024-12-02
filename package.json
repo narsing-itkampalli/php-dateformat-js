@@ -1,0 +1,32 @@
+{
+  "name": "php-dateformat-js",
+  "version": "1.0.0",
+  "description": "A simple PHP-like date format for JavaScript",
+  "author": "Narsing Itkampalli",
+  "license": "MIT",
+  "homepage": "https://github.com/narsing-itkampalli/php-dateformat-js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/narsing-itkampalli/php-dateformat-js.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "php",
+    "dateformat",
+    "date",
+    "format",
+    "js"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.7.6",
+    "typescript": "^5.6.3"
+  }
+}
