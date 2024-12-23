@@ -172,7 +172,7 @@ const formats = {
 
     // Milliseconds.
     // Example: 654
-    v: (date: Date) => date.getMilliseconds().toString().padStart(3, '0'), // Later
+    v: (date: Date) => date.getMilliseconds().toString().padStart(3, '0'),
 
     // Timezone identifier
     // Examples: UTC, GMT, Atlantic/Azores
