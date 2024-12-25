@@ -1,15 +1,21 @@
 {
-  "name": "php-dateformat-js",
+  "name": "php-js-dateformat",
   "version": "1.0.0",
   "description": "A simple PHP-like date format for JavaScript",
   "author": "Narsing Itkampalli",
   "license": "MIT",
   "homepage": "https://github.com/narsing-itkampalli/php-dateformat-js",
-  "main": "./dist/index.js",
+  "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "exports": {
-    ".": "./index.js",
-    "./timezone": "./helpers/timezone.js"
+    ".": {
+        "require": "./dist/index.cjs",
+        "import": "./dist/index.js"
+    },
+    "./timezone": {
+        "require": "./dist/helpers/timezone.cjs",
+        "import": "./dist/helpers/timezone.js"
+    }
   },
   "type": "module",
   "repository": {
@@ -20,7 +26,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc"
+    "build": "tsc && npx rollup ./dist/index.js --file ./dist/index.cjs --format cjs && npx rollup ./dist/helpers/timezone.js --file ./dist/helpers/timezone.cjs --format cjs"
   },
   "keywords": [
     "php",
@@ -31,6 +37,7 @@
   ],
   "devDependencies": {
     "@types/node": "^22.7.6",
+    "rollup": "^4.29.1",
     "typescript": "^5.6.3"
   }
 }

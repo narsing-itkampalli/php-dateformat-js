@@ -1,7 +1,7 @@
-# php-dateformat-js
+# php-js-dateformat
 
 ### A JavaScript Library for PHP-Style Date Formatting
-`php-dateformat-js` is a lightweight and powerful JavaScript library that mimics PHP's `date_format()` function, enabling seamless date formatting with PHP-style format strings.
+`php-js-dateformat` is a lightweight and powerful JavaScript library that mimics PHP's `date_format()` function, enabling seamless date formatting with PHP-style format strings.
 
 ## Features
 - **PHP-Style Formatting:** Format dates using familiar strings like `Y-m-d` and `H:i:s`.
@@ -11,14 +11,14 @@
 ## Installation
 ### Using npm:
 ```bash
-npm install php-dateformat-js
+npm install php-js-dateformat
 ```
 
 ## Basic Usage
-Here’s how you can start using `php-dateformat-js`
+Here’s how you can start using `php-js-dateformat`
 ### Formatting Dates
 ```js
-import dateFormat from 'php-dateformat-js';  
+import dateFormat from 'php-js-dateformat';  
 
 const date = new Date();  
 
@@ -37,7 +37,7 @@ console.log(dateFormat(date, 'Y-m-d H:i:s'));
     // Output: Date: 2024-11-23 15:30:45
     ```
 ## Supported Format Characters
-`php-dateformat-js` supports most of the format characters found in [PHP's date format function](https://www.php.net/manual/en/datetime.format.php), including:
+`php-js-dateformat` supports most of the format characters found in [PHP's date format function](https://www.php.net/manual/en/datetime.format.php), including:
 - Year: `Y`, `y`
 - Month: `m`, `n`, `F`, `M`
 - Day: `d`, `j`, `l`, `D`
@@ -54,7 +54,7 @@ Due to limitations in the browser's Date API, some parameters behave differently
 - **Microseconds (`v`):** Always returns `milliseconds * 1000` as true microseconds are not supported.
 - **`T` (Timezone Abbreviation):** Returns the same as `O`. For actual timezone abbreviations, use:
     ```js
-    import { getTimezoneByName } from 'php-dateformat-js/timezone';  
+    import { getTimezoneByName } from 'php-js-dateformat/timezone';  
 
     const timezoneInfo = getTimezoneByName('Asia/Calcutta');  
     console.log(timezoneInfo?.abbr); // Output: IST (or `undefined`) 
@@ -62,4 +62,4 @@ Due to limitations in the browser's Date API, some parameters behave differently
 ## Contributing
 Contributions, issues, and feature requests are welcome!
 ## License
-`php-dateformat-js` is open-source and licensed under the [MIT License](./LICENSE).
+`php-js-dateformat` is open-source and licensed under the [MIT License](./LICENSE).
